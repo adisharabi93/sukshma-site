@@ -75,6 +75,13 @@ a{color:inherit}
 .steps li::before{content:counter(s);font-family:var(--display);font-size:44px;color:var(--clay);display:block;line-height:1;margin-bottom:10px}
 .steps h3{font-size:24px;margin-bottom:8px}
 .steps p{color:var(--muted);font-size:17px}
+.tracks{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:18px}
+.track{border:1.5px solid var(--line);border-radius:28px;padding:24px}
+.track.star{border-color:var(--gold);border-width:2px}
+.track h3{font-size:26px;margin-bottom:4px}
+.track .n{color:var(--clay);font-weight:700;margin-bottom:10px}
+.track p{color:var(--muted);font-size:17px}
+.tracks-note{margin-top:22px;font-size:18px;max-width:40em}
 .about{display:flex;flex-wrap:wrap;align-items:center;gap:32px;max-width:none}
 .about .txt{display:grid;gap:12px;max-width:34em;flex:1 1 260px;min-width:0}
 .room{width:100%;height:auto;border-radius:28px;display:block}
@@ -104,10 +111,10 @@ a{color:inherit}
   <section class="wrap hero">
     <div>
       <div class="eyebrow">יוגה ופילאטיס · שיעורים פרטיים</div>
-      <h1>תרגול אישי שמותאם בדיוק אליך</h1>
-      <p class="lead">שיעור פרטי בקליניקה בראשון לציון, שמשלב כמה סגנונות תרגול, עם תשומת לב מלאה לגוף, לקצב ולמטרות שלך.</p>
-      <div class="facts"><span>שיעור פרטי</span><span>בקליניקה</span><span>בתיאום מראש</span></div>
-      <a class="btn" id="wa" href="https://wa.me/972525624983?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%A9%D7%99%D7%A2%D7%95%D7%A8%D7%99%D7%9D%20%D7%A4%D7%A8%D7%98%D7%99%D7%99%D7%9D" target="_blank" rel="noopener">לתיאום שיעור בוואטסאפ</a>
+      <h1>תהליך אישי עם מטרה ברורה</h1>
+      <p class="lead">מסלול שיעורים פרטיים בקליניקה בראשון לציון. תרגול שמשלב כמה סגנונות, נבנה סביב המטרות שלך ומתקדם איתך משבוע לשבוע.</p>
+      <div class="facts"><span>מפגש אחד בשבוע</span><span>מסלול של 1–3 חודשים</span><span>בקליניקה</span></div>
+      <a class="btn" id="wa" href="https://wa.me/972525624983?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%94%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%D7%99%D7%9D%20%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%99%D7%9D.%20%D7%94%D7%9E%D7%98%D7%A8%D7%94%20%D7%A9%D7%9C%D7%99%20%D7%94%D7%99%D7%90%3A%20" target="_blank" rel="noopener">לתיאום שיעור בוואטסאפ</a>
       <div class="note">או בטלפון: <span dir="ltr">052-5624983</span></div>
     </div>
     <div class="art" aria-hidden="true">
@@ -134,9 +141,9 @@ a{color:inherit}
         <li>רק מתחילים ורוצים ללמוד את היסודות בקצב שלכם</li>
         <li>חוזרים לתנועה אחרי הפסקה או עם מגבלות גופניות</li>
         <li>רוצים לטפח תרגול עצמי או להעמיק</li>
-        <li>לא מצליחים להתאים את לוח הזמנים של השיעורים הקבוצתיים</li>
+        <li>מוכנים להתחייב לתרגול קבוע פעם בשבוע</li>
       </ul>
-      <p class="signs-note"><strong>לפני השיעור הראשון נדבר,</strong> כדי להכיר ולוודא שהתרגול מתאים לך.</p>
+      <p class="signs-note"><strong>המסלול מתאים למי שמחפשים תהליך ותוצאה לאורך זמן.</strong> לפני שמתחילים נדבר, כדי להכיר ולוודא שזה מתאים לך.</p>
     </div>
   </section>
 
@@ -144,8 +151,19 @@ a{color:inherit}
     <h2>איך זה עובד</h2>
     <ol class="steps">
       <li><h3>שיחה קצרה</h3><p>מכירים, מדברים על המטרות ועל מגבלות גופניות, ובודקים שזה מתאים.</p></li>
-      <li><h3>שיעור פרטי בקליניקה</h3><p>תרגול שנבנה בשבילך, שמשלב כמה סגנונות תרגול לפי מה שהגוף שלך צריך.</p></li>
+      <li><h3>בוחרים מסלול</h3><p>חודש, חודשיים או שלושה, לפי המטרה ולפי הקצב שמתאים לך.</p></li>
+      <li><h3>מתרגלים כל שבוע</h3><p>מפגש קבוע בקליניקה, ותרגול קצר לבית שמתעדכן לאורך הדרך.</p></li>
     </ol>
+  </section>
+
+  <section class="wrap sec" style="padding-top:0">
+    <h2>המסלולים</h2>
+    <div class="tracks">
+      <div class="track"><h3>חודש</h3><div class="n">4 מפגשים</div><p>היכרות עם הגוף, יסודות נכונים ותרגול לבית.</p></div>
+      <div class="track"><h3>חודשיים</h3><div class="n">8 מפגשים</div><p>זמן לבנות הרגל, להתקדם ולהרגיש שינוי.</p></div>
+      <div class="track star"><h3>שלושה חודשים</h3><div class="n">12 מפגשים</div><p>תהליך מלא, כולל המלצות תזונה ואורח חיים לפי איורוודה.</p></div>
+    </div>
+    <p class="tracks-note">בכל המסלולים: שיחת היכרות ותיאום מטרות, תרגול לבית וזמינות בוואטסאפ בין המפגשים. <strong>המסלולים מתחילים מ־1,150 ₪ לחודש</strong>, ואפשר לחלק לתשלומים.</p>
   </section>
 
    <section class="band">
@@ -160,8 +178,8 @@ a{color:inherit}
 
   <section class="wrap cta">
     <h2>נשמח להכיר</h2>
-    <p>כותבים לנו בוואטסאפ ומתאמים שיחה ומועד לשיעור.</p>
-    <a class="btn" id="wa2" href="https://wa.me/972525624983?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%A9%D7%99%D7%A2%D7%95%D7%A8%D7%99%D7%9D%20%D7%A4%D7%A8%D7%98%D7%99%D7%99%D7%9D" target="_blank" rel="noopener">לתיאום שיעור בוואטסאפ</a>
+    <p>כותבים בוואטסאפ מה המטרה שלך, ונתאם שיחת היכרות.</p>
+    <a class="btn" id="wa2" href="https://wa.me/972525624983?text=%D7%A9%D7%9C%D7%95%D7%9D%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%94%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%D7%99%D7%9D%20%D7%94%D7%A4%D7%A8%D7%98%D7%99%D7%99%D7%9D.%20%D7%94%D7%9E%D7%98%D7%A8%D7%94%20%D7%A9%D7%9C%D7%99%20%D7%94%D7%99%D7%90%3A%20" target="_blank" rel="noopener">לתיאום שיעור בוואטסאפ</a>
   </section>
 </main>
 
