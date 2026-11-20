@@ -55,6 +55,30 @@ p{margin:0 0 16px}
 footer{border-top:1px solid var(--line);margin-top:64px}
 footer .wrap{max-width:1180px;padding-block:32px 48px;color:var(--muted);font-size:15px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
 </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1184121697369392');
+fbq('track', 'PageView');
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a[href*="wa.me"],a[href^="tel:"]');
+  if(a&&window.fbq){fbq('track','Lead',{content_name:location.pathname||'/'});}
+},true);
+document.addEventListener('submit',function(e){
+  if(e.target&&e.target.id==='reg'&&window.fbq){fbq('track','Lead',{content_name:'homepage-form'});}
+},true);
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1184121697369392&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 <header><div class="wrap"><a class="brand" href="/">סוקשמה</a><nav class="hnav" aria-label="ניווט"><a class="t" href="/articles">מאמרים</a><a class="t" href="/#services">שירותים</a><a class="btn" href="https://wa.me/972525624983?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%A2%D7%93%D7%99%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%93%D7%A8%D7%9A%20%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D">וואטסאפ</a></nav></div></header>
