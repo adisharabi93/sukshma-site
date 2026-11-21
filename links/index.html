@@ -42,7 +42,9 @@ fbq('init', '1184121697369392');
 fbq('track', 'PageView');
 document.addEventListener('click',function(e){
   var a=e.target.closest&&e.target.closest('a[href*="wa.me"],a[href^="tel:"]');
-  if(a&&window.fbq){fbq('track','Lead',{content_name:location.pathname||'/'});}
+  if(!a||!window.fbq)return;
+  fbq('track','Lead',{content_name:location.pathname||'/'});
+  if(a.target!=='_blank'&&!e.ctrlKey&&!e.metaKey){e.preventDefault();var h=a.href;setTimeout(function(){location.href=h;},400);}
 },true);
 document.addEventListener('submit',function(e){
   if(e.target&&e.target.id==='reg'&&window.fbq){fbq('track','Lead',{content_name:'homepage-form'});}
