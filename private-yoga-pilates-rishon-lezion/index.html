@@ -106,6 +106,16 @@ a{color:inherit}
   .sec{padding-block:48px}
   .btn{display:block;text-align:center}
 }
+.rv{padding:56px 0}
+.rv-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px;margin-bottom:24px}
+.rv-head h2{font-family:'Varela Round','Heebo',sans-serif;font-weight:400;font-size:clamp(26px,4vw,34px);line-height:1.2;margin:0;color:#2B1D16}
+.rv-score{font-size:16px;color:#5A4A3F}
+.rv-score b{color:#2B1D16}
+.rv-stars{color:#B77A1F;letter-spacing:2px}
+.rv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px;margin:0;padding:0;list-style:none}
+.rv-card{background:#FBF6EC;border:1px solid #D8CAB1;border-radius:16px;padding:20px 22px;margin:0;display:flex;flex-direction:column;gap:10px}
+.rv-card blockquote{margin:0;font-size:17px;line-height:1.65;color:#2B1D16}
+.rv-card figcaption{font-size:15px;color:#5A4A3F}
 </style>
 
 <div class="wrap top">
@@ -174,6 +184,19 @@ a{color:inherit}
     <p class="tracks-note">בכל המסלולים: שיחת היכרות ותיאום מטרות, תרגול לבית וזמינות בוואטסאפ בין המפגשים. <strong>החל מ־260 ₪ למפגש</strong> (במסלול של שלושה חודשים), ואפשר לחלק לתשלומים.</p>
   </section>
 
+<section class="rv" aria-labelledby="rv-title">
+  <div class="wrap">
+    <div class="rv-head">
+      <h2 id="rv-title">מה אומרים עליי</h2>
+      <span class="rv-score"><span class="rv-stars" aria-hidden="true">★★★★★</span> <b>5.0</b> · 18 ביקורות בגוגל</span>
+    </div>
+    <ul class="rv-grid">
+      <li><figure class="rv-card"><div class="rv-stars" aria-label="5 כוכבים">★★★★★</div><blockquote>מקצוענית אמיתית! מומלצת בחום.</blockquote><figcaption>אורית ג. · ביקורת בגוגל</figcaption></figure></li>
+      <li><figure class="rv-card"><div class="rv-stars" aria-label="5 כוכבים">★★★★★</div><blockquote>מורה בחסד! קשובה, רגישה, מדייקת ומדויקת, וסופר מקצוענית.</blockquote><figcaption>סיגל ו. · ביקורת בגוגל</figcaption></figure></li>
+      <li><figure class="rv-card"><div class="rv-stars" aria-label="5 כוכבים">★★★★★</div><blockquote>מומלץ מאוד!! שיעורים מעולים, מקצועים מאוד והאווירה באימון ממש נעימה! בלי קשר עדי מורה מעולה שיודעת לגרום ליוגה להיות יותר מסתם פעילות גופנית.</blockquote><figcaption>איתי א. · ביקורת בגוגל</figcaption></figure></li>
+    </ul>
+  </div>
+</section>
    <section class="band">
     <div class="wrap sec about">
       <div class="txt">
